@@ -1,0 +1,8 @@
+# Configuration settings for the data pipeline
+
+data_paths:
+  raw_data: data/raw/
+  processed_data: data/processed/
+
+files:
+  raw_input: sample.csv
