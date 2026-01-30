@@ -3,6 +3,7 @@ import yaml
 
 from src.extract import read_csv
 
+from src.transform import transform_orders
 
 def load_config() -> dict:
     """Load pipeline configuration."""
@@ -22,8 +23,12 @@ def main() -> None:
         required_columns=["order_id", "customer_id", "order_date", "amount"]
     )
 
+    clean_df = transform_orders(result.df)
+
     print("Loaded rows:", len(result.df))
-    print(result.df.head())
+    print("Clean rows:", len(clean_df))
+    print(clean_df.head())
+
 
 
 if __name__ == "__main__":
