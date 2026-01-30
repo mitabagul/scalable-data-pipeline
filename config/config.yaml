@@ -6,3 +6,4 @@ data_paths:
 
 files:
   raw_input: sample.csv
+  processed_output: orders_processed.csv
